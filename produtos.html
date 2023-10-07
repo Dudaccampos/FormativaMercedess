@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="produtos.css">
+    <title>PRODUTOS - MACO COMPANY</title>
+</head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+    .product-image {
+        * {
+    margin: 0;
+  }
+
+header {background-color: rgb(0, 0, 0);}
+
+.cabecalho h1 {
+        color:rgb(255, 255, 255);
+        margin: auto 0;
+        position: relative;
+        text-align: center;
+        font-size: 45px;
+        margin-top: -110px;
+}
+
+.cabecalho {
+    height: 160px;
+}
+
+.cabecalho img {
+    height: 150px;
+    margin-left: 830px;
+    margin-top: 8px;
+    width: 220px;
+}
+
+.cabecalho h1 {
+    margin-top: -90px;
+}
+
+h1 {
+    color:rgb(255, 255, 255);
+    align-items: center;
+    justify-content: center;
+    margin-left: 50%;
+    margin-top: 2%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    margin-right: 80vw;
+}
+
+.card {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 80px 35px;
+    background: #f8f8f805;
+    margin-left: 23%;
+    margin-top: 5%;
+    border-radius: 20px;
+}
+
+.card h3{
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+
+}
+
+.main-dados {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  
+}
+
+.main-dados h3 {
+    margin-top: 1%;
+}
+
+
+.main-dados input {
+    width: 60%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: white;
+    color: black;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px rgb(0, 0, 0);
+    outline: none;
+    box-sizing: border-box;
+   
+}
+
+.main-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+}
+
+
+
+.main-text textarea:hover {
+    background-color:white;
+transform: scale(1.1)
+}
+
+.main-bnt button {
+    width: 60%;
+    margin-top: 40%;
+    padding: 15px 100px;
+    margin: 0 auto;
+    margin-left: 15%;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: rgb(0, 0, 0);
+    background: #ffffff;
+    box-shadow: 0px 10px 40px -12px #000000;
+    
+}
+a{
+    color: black;
+}
+img{
+    width: 550px;
+    height: 200px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+nav {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 25px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav a:hover{
+    color: #219fa3;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 65px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para imagens dos produtos */
+.product-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilos para tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #219fa3;
+}
+
+.product-image{
+    width: 230px;
+}
+
+.menu12 {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu12 li {
+    display: inline-block;
+    margin-right: 20px;
+    position: relative;
+}
+
+.barra {
+    height: 2px;
+    width: 0;
+    background-color: blue;
+    position: absolute;
+    bottom: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+.botaocomprar{
+    background-color: #219fa3;
+    color: #219fa3;
+
+}
+
+.text-box {
+    margin-left: 530px;
+   margin-top: 15px;
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: absolute;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+    background-color: #219fa3;
+    color: #000000;
+    font-weight: bold;
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color: #5adce0;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+}
+</style>
+<body>
+    <header class="cabecalho">
+        <img src="logo.png">
+    </header>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="fretes.html">Fretes</a>
+        <a href="galeriafotos.html">Galeria de Fotos</a>
+        <a href="formulariofornecedores.html">Fornecedores</a>
+        <a href="formulariocustos.html">Custos de Produção</a>
+        <a href="formuláriomateriasprimas.html">Matérias-Primas</a>
+        <a href="formularioclientes.html">Clientes</a>
+    </nav>
+    <div class="container">
+        <h2>Nossos Produtos</h2>
+        <br><br>
+        <img class="product-image" src="amortecedor.png"> 
+        <img class="product-image" src="braço suspenção.png">
+        <img class="product-image" src="bucha suspenção.png">
+        <img class="product-image" src="termostato.png">
+        <img class="product-image" src="trocador de calor.png">
+        <table>
+            <tr>
+                <th>AMORTECEDOR</th>
+                <th>BRAÇO SUSPENSÃO</th>
+                <th>BUCHA SUSPENSÃO</th>
+                <th>TERMOSTATO</th>
+                <th>TROCADOR DE CALOR</th>
+            </tr>
+            <tr>
+                <td>R$1.990,00</td>
+                <td>R$849,00</td>
+                <td>R$206,72</td>
+                <td>R$R$879,00</td>
+                <td>R$299,00</td>
+            </tr>
+        </table>
+        <table>
+            <img class="product-image" src="coxim do motor.png">
+        <img class="product-image" src="sensnor abs.png">
+        <img class="product-image" src="bomba água.png">
+        <img class="product-image" src="sensor de pastilha.png">
+        <img class="product-image" src="bieleta dianteira.png">
+            <tr>
+                <th>COXIM DO MOTOR</th>
+                <th>SENSOR ABS</th>
+                <th>BOMBA ÁGUA</th>
+                <th>SENSOR DE PASTILHA</th>
+                <th>BIELETA DIANTEIRA</th>
+            </tr>
+            <tr>
+                <td>R$850,00</td>
+                <td>R$250,00</td>
+                <td>R$206,72</td>
+                <td>R$107,50</td>
+                <td>R$167,28</td>
+            </tr>
+        </table>
+    </table>
+    <table>
+    <img class="product-image" src="terminal direção.png">
+    <img class="product-image" src="tampa filtro.png">
+    <img class="product-image" src="bomba de vácuo.png">
+    <img class="product-image" src="barra axial.png">
+    <img class="product-image" src="coxim amortecedor.png">
+        <tr>
+            <th>TERMINAL DIREÇÃO</th>
+            <th>TAMPA FILTRO DE ÓLEO</th>
+            <th>BOMBA DE VÁCUO</th>
+            <th>BARRA AXIAL</th>
+            <th>COXIM AMORTECEDOR</th>
+        </tr>
+        <tr>
+            <td>R$229,00</td>
+            <td>R$250,00</td>
+            <td>R$999,00</td>
+            <td>R$199,00</td>
+            <td>R$646,00</td>
+        </tr>
+    </table>
+    <table>
+        <img class="product-image" src="reservatório de agua.png">
+        <img class="product-image" src="mangueira ar quente.png">
+        <img class="product-image" src="sensor fase.png">
+        <img class="product-image" src="tampa  válvula.png">
+        <img class="product-image" src="bandeja suspensão.png">
+            <tr>
+                <th>RESERVATÓRIO</th>
+                <th>MANGUEIRA</th>
+                <th>SENSOR FASE</th>
+                <th>TAMPA VÁLVULA</th>
+                <th>BANDEJA SUSPENSÃO</th>
+            </tr>
+            <tr>
+                <td>R$529,00</td>
+                <td>R$299,00</td>
+                <td>R$250,00</td>
+                <td>R$1.990,00</td>
+                <td>R$980,00</td>
+            </tr>
+           
+        </table>
+        <div name="MacoCompany"></div>
+        <div id="Nossa Empresa"></div>
+        
+        <div class="text-box">
+            <a href="https://api.whatsapp.com/send?phone=5511942976494&text=Ol%C3%A1,%20seja%20bem-vindo%20%C3%A0%20Maco%20Company!%0AQue%20tipo%20de%20servi%C3%A7o%20voc%C3%AA%20deseja?" class="btn btn-white btn-        animate">COMPRAR</a>
+        </div>
+    
+    </div>
+<script src="produtos.js"></script>
+</body>
+</html>
